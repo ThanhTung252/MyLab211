@@ -7,6 +7,7 @@ package week1;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
  *
  * @author Dang Thanh Tung
@@ -18,14 +19,15 @@ public class CountWC {
     public CountWC(String input) {
         this.input = input;
     }
+        
 
     Map<String, Integer> countWords() {
         Map<String, Integer> wordcount = new HashMap<>();
-        String[] words = input.toLowerCase().split("\\s");
+        String[] words = input.toLowerCase().split("\\s+");
         for (String word : words) {
-            if (word.isEmpty()) {
-                continue;
-            }
+//            if (word.isEmpty()) {
+//                continue;
+//            }
             wordcount.put(word, wordcount.getOrDefault(words, 0) + 1);
         }
         return wordcount;
@@ -36,12 +38,14 @@ public class CountWC {
         Map<Character, Integer> charcount = new HashMap<>();
         char[] charac = input.toLowerCase().toCharArray();
         for (char c : charac) {
+            if(c != ' ')
             charcount.put(c, charcount.getOrDefault(c, 0) + 1);
         }
 
         return charcount;
     }
 }
+
 //
 //   Hàm countWords:
 //Chuyển chuỗi về chữ thường (toLowerCase()).
