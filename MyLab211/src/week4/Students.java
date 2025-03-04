@@ -6,53 +6,60 @@ package week4;
 
 /**
  *
- * @author Dang Thanh Tung
+ * @author LENOVO LEGION
  */
 public class Students {
+    private String ID;
+    private String Name;
+    private String Semester;
+    private String Course;
 
-    private String id;
-    private String name;
-    private String semester;
-    private String courseName;
-
-    public Student(String id, String name, String semester, String courseName) {
-        this.id = id;
-        this.name = name;
-        this.semester = semester;
-        this.courseName = courseName;
+    public Students(String ID, String Name, String Semester, String Course) {
+        this.ID = ID;
+        this.Name = Name;
+        this.Semester = Semester;
+        this.Course = Course;
     }
 
-    public String getId() {
-        return id;
+
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getName() {
-        return name;
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     public String getSemester() {
-        return semester;
+        return Semester;
     }
 
-    public String getCourseName() {
-        return courseName;
+    public void setSemester(String Semester) {
+        this.Semester = Semester;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getCourse() {
+        return Course;
     }
 
-    public void setSemester(String semester) {
-        this.semester = semester;
-    }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    public void setCourse(String Course) {
+        this.Course = Course;
     }
 
     @Override
     public String toString() {
-        return "ID: " + id + ", Name: " + name + ", Semester: " + semester + ", Course: " + courseName;
+        return "Students{" + "ID=" + ID + ", Name=" + Name + ", Semester=" + Semester + ", Course=" + Course + '}';
     }
-}  
-
+    
+    
+    
+}
