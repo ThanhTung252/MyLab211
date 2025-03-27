@@ -5,6 +5,14 @@ public class Calculate {
     public Calculate() {
     }
 
+    boolean isPerfectSquare(double n) {
+        if (n < 0) {
+            return false;
+        }
+        int sqrt = (int) Math.sqrt(n);
+        return sqrt * sqrt == n;
+    }
+
     void findNumbers(double numbers) {
         if (isPerfectSquare(numbers)) {
             if (numbers % 2 != 0) {
@@ -22,14 +30,6 @@ public class Calculate {
         } else {
             System.out.println("Number is Even: " + numbers);
         }
-    }
-
-    boolean isPerfectSquare(double n) {
-        if (n < 0) {
-            return false;
-        }
-        int sqrt = (int) Math.sqrt(n);
-        return sqrt * sqrt == n;
     }
 
     public void superlativeEquation(double a, double b) {

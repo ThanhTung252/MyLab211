@@ -19,9 +19,10 @@ public class test {
         int choice;
         do {
             System.out.println("1. Add contact");
-            System.out.println("2. Show all contact");
-            System.out.println("3. Delete contact by ID");
-            System.out.println("4. Exit");
+            System.out.println("2. Increase salary");
+            System.out.println("3. decrese salary");
+            System.out.println("4. Display workers");
+            System.out.println("5. Exit");
             System.out.print("Choose an option: ");
 
             choice = sc.nextInt();
@@ -58,6 +59,7 @@ public class test {
                     double up = sc.nextDouble();
                     if (managerWorkers.increaseSalary(code, up)) {
                         System.out.println("Increase salary success!");
+                        managerWorkers.showWorkers();
                         break;
                     } else {
                         System.out.println("Error increase");
@@ -71,6 +73,7 @@ public class test {
                     double up1 = sc.nextDouble();
                     if (managerWorkers.decreaseSalary(code1, up1)) {
                         System.out.println("Decrease salary success!");
+                        
                         break;
                     } else {
                         System.out.println("Error Decrease");
@@ -79,8 +82,10 @@ public class test {
                 case 4:
                     managerWorkers.showWorkers();
                     break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                case 5:
+                    System.out.println("GOOD BYE");
+                    break;
+                
             }
         } while (choice > 0 && choice < 5);
     }

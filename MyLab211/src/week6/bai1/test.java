@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package weeb6.Bai1;
+package week6.Bai1;
 
 import java.util.Scanner;
 import static week4.Utils.isNumber;
@@ -57,7 +57,7 @@ public class test {
                         System.out.println("Successful");
                         break;
                     } else {
-                        System.out.println("Fall");
+                        System.out.println("Fail");
                     }
                     }
                 default:

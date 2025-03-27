@@ -17,7 +17,7 @@ public class ManagerWorker {
     public boolean addWorker(Worker wr){
         for(Worker w: workers){
             if(w.getCode().equals(wr.getCode()) || wr.getCode().equals(" ")){
-                System.out.println("Code already exit");
+                System.out.println("Code already exist");
                 return false;
             }
             if(wr.getAge() <=18 && wr.getAge()>= 50){
@@ -36,8 +36,9 @@ public class ManagerWorker {
     
     public boolean increaseSalary(String code, double upSalary){
         for(Worker w: workers){
-            if(w.getCode().equals(code) && upSalary > 0){
+            if(w.getCode().equals(code) && upSalary > w.getSalary()){
                w.setSalary(upSalary);
+               w.setStatus("up");
                return true;
             }
         }
@@ -46,8 +47,9 @@ public class ManagerWorker {
     
     public boolean decreaseSalary(String code, double deSalary){
                for(Worker w: workers){
-            if(w.getCode().equals(code) && deSalary > 0){
+            if(w.getCode().equals(code) && deSalary < w.getSalary()){
                w.setSalary(deSalary);
+               w.setStatus("down");
                return true;
             }
         }

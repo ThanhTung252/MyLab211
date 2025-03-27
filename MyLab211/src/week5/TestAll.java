@@ -12,9 +12,9 @@ public class TestAll {
 
         while (true) {
             System.out.println("*** Program Selector ***");
-            System.out.println("1. Large Number (Bài 1)");
-            System.out.println("2. Room Reservation (Bài 2)");
-            System.out.println("3. Course Management (Bài 3)");
+            System.out.println("1. Large Number (Bai 1)");
+            System.out.println("2. Room Reservation (Bai 2)");
+            System.out.println("3. Course Management (Bai 3)");
             System.out.println("4. Exit");
             System.out.print("You choose: ");
             int choice = sc.nextInt();

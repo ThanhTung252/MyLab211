@@ -7,12 +7,13 @@ import java.util.Scanner;
  * @author ADMIN
  */
 public class ComputerProgram {
+
     enum Operator {
         ADD("+"), SUBTRACT("-"), MULTIPLY("*"), DIVIDE("/"), EXPONENT("^"), EQUALS("=");
 
         private final String symbol;
 
-        Operator(String symbol) {
+        private Operator(String symbol) {
             this.symbol = symbol;
         }
 
@@ -20,15 +21,18 @@ public class ComputerProgram {
             return symbol;
         }
 
-        public static Operator fromString(String symbol) {
+        private static Operator fromString(String symbol) {
             for (Operator op : Operator.values()) {
                 if (op.getSymbol().equals(symbol)) {
                     return op;
                 }
             }
             return null;
+
         }
+
     }
+
     public double calculate(double a, Operator operator, double b) {
         switch (operator) {
             case ADD:
@@ -48,12 +52,14 @@ public class ComputerProgram {
                 throw new IllegalArgumentException("Invalid operator.");
         }
     }
+
     public double calculateBMI(double weight, double height) {
-        if (height <= 0) {
-            throw new ArithmeticException("Height must be greater than zero.");
+        if (height < 0) {
+            throw new ArithmeticException("height must greater than zero ");
         }
         return weight / (height * height);
     }
+
     public String getBMIStatus(double bmi) {
         if (bmi < 19) {
             return "UNDER-STANDARD";

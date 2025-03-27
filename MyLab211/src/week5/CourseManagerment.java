@@ -62,30 +62,5 @@ public class CourseManagerment {
         }
     }
     
-//    public int deleteOnlineCourse(String idCourse){
-//        // viet code để remove
-//        int result = 0;
-//        for(OnlineCourse on : onlineCourse){
-//            if(on.getCourseID().equals(idCourse)){
-//                onlineCourse.remove(on);
-//                result = 1;
-//            }
-//        }
-//        return result;
-//    }
-//    
-//    public void updateOnlineCourse(OnlineCourse idCourse){
-//        // viết code để update
-//        for(int i = 0; i <onlineCourse.size(); i++){
-//            if(onlineCourse.get(i).getCourseID().equals(idCourse.courseID)){
-//                onlineCourse.set(i, idCourse);
-//            }
-//        }
-//    }
-//    
-//    public void showOnlineCourse(){
-//        for(OnlineCourse c : onlineCourse){
-//            System.out.println(c.toString());
-//        }
-//    }
+
 }

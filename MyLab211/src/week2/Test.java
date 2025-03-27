@@ -25,7 +25,12 @@ public class Test {
                 case 1: {
                     int option;
                     do {
-                        displayMenuOne();
+//                        displayMenuOne();
+                        System.out.println("========= Calculator Program =========");
+                        System.out.println("1. Normal Calculator");
+                        System.out.println("2. BMI Calculator");
+                        System.out.println("3. Exit");
+                        System.out.print("Please choose one option: ");
                         option = scanner.nextInt();
                         scanner.nextLine();
                         switch (option) {
@@ -58,7 +63,7 @@ public class Test {
                         System.out.print("Please select an option: ");
                         int option = scanner.nextInt();
 
-                        if (option== 4) {
+                        if (option == 4) {
                             System.out.println("Exiting program.");
                             break;
                         }
@@ -111,14 +116,13 @@ public class Test {
         } while (choice != 4);
     }
 
-    private static void displayMenuOne() {
-        System.out.println("========= Calculator Program =========");
-        System.out.println("1. Normal Calculator");
-        System.out.println("2. BMI Calculator");
-        System.out.println("3. Exit");
-        System.out.print("Please choose one option: ");
-    }
-
+//    private static void displayMenuOne() {
+//        System.out.println("========= Calculator Program =========");
+//        System.out.println("1. Normal Calculator");
+//        System.out.println("2. BMI Calculator");
+//        System.out.println("3. Exit");
+//        System.out.print("Please choose one option: ");
+//    }
     private static void runNormalCalculator(Scanner scanner, ComputerProgram calculator) {
         double memory = 0.0;
         boolean firstInput = true;

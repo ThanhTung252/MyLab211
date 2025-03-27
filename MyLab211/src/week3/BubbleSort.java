@@ -9,40 +9,39 @@ import java.util.Scanner;
  * @author Dang Thanh Tung
  */
 // Class for Bubble Sort
-public class BubbleSort { // Đổi class thành public
-    public static void performBubbleSort() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the size of the array: ");
-        int n = sc.nextInt();
-        int[] arr = generateRandomArray(n);
+public class BubbleSort {
 
-        System.out.println("Unsorted Array: " + Arrays.toString(arr));
-        bubbleSort(arr);
-        System.out.println("Sorted Array: " + Arrays.toString(arr));
+    private int array[];
+
+    public BubbleSort() {
+        this.array = array;
     }
 
-    private static int[] generateRandomArray(int size) {
+    public void generateRandomArray(int size) {
+        array = new int[size];
         Random random = new Random();
-        int[] arr = new int[size];
-        for (int i = 0; i < size; i++) {
-            arr[i] = random.nextInt(100); // Random integers between 0 and 99
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(array.length); 
         }
-        return arr;
     }
 
-    private static void bubbleSort(int[] arr) {
-        int n = arr.length;
-        boolean swapped;
-        do {
-            swapped = false;
-            for (int i = 1; i < n; i++) {
-                if (arr[i - 1] > arr[i]) {
-                    int temp = arr[i - 1];
-                    arr[i - 1] = arr[i];
-                    arr[i] = temp;
-                    swapped = true;
+    void showArray() {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + ", ");
+        }
+    }
+
+    void sort(){
+        int n = array.length;
+        for(int i = 0; i< n -1; i++){
+            for(int y = 0; y< n- 1- i; y++){
+                if(array[y] > array[y+1]){
+                    int temp = array[y];
+                    array[y] = array[y+1];
+                    array[y+1] = temp;
                 }
             }
-        } while (swapped);
+        }
     }
 }
